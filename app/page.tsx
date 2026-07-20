@@ -14,8 +14,7 @@ export default function HomePage() {
 
       <div className="rounded-lg border bg-white p-8 shadow-sm">
         <p className="text-gray-500">
-          🚀 The search section and internship listings will be added in the next
-          phases.
+         
         </p>
       </div>
     </section>

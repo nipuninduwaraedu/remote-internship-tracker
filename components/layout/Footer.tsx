@@ -8,9 +8,9 @@ export default function Footer() {
         </p>
 
         <p>
-          Built with <span className="font-medium">Next.js</span>,{" "}
-          <span className="font-medium">TypeScript</span> &{" "}
-          <span className="font-medium">Tailwind CSS</span>
+          <span className="font-medium">Remotework</span>,{" "}
+          <span className="font-medium">JobFinder</span> &{" "}
+          <span className="font-medium">WorldWide</span>
         </p>
       </div>
     </footer>
