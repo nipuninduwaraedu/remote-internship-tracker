@@ -1,22 +1,17 @@
-export default function HomePage() {
+import Hero from "@/components/home/Hero";
+import SearchBar from "@/components/home/SearchBar";
+import PopularTags from "@/components/home/PopularTags";
+import EmptyState from "@/components/home/EmptyState";
+
+function page() {
   return (
-    <section className="space-y-6">
-      <div>
-        <h1 className="text-4xl font-bold">
-          Find Your Next Remote Internship
-        </h1>
-
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Search and explore the latest remote internship opportunities from
-          companies around the world.
-        </p>
-      </div>
-
-      <div className="rounded-lg border bg-white p-8 shadow-sm">
-        <p className="text-gray-500">
-         
-        </p>
-      </div>
-    </section>
+    <>
+      <Hero />
+      <SearchBar />
+      <PopularTags />
+      <EmptyState />
+    </>
   );
 }
+
+export default page;
