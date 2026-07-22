@@ -2,7 +2,7 @@ export interface Internship {
   id: number;
   title: string;
   company: string;
-  companyLogo: string | null;
+  companyLogo: string;
   description: string;
   tags: string[];
   salary: string | null;
