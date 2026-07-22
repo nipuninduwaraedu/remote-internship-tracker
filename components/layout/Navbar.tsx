@@ -17,7 +17,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/saved"
-            className="text-sm font-medium text-gray-700 hover:text-blue-600"
+            className="font-medium text-gray-700 hover:text-blue-600"
           >
             Saved
           </Link>
@@ -26,4 +26,3 @@ export default function Navbar() {
     </header>
   );
 }
-
