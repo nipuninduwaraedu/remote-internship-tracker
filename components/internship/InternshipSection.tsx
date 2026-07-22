@@ -36,9 +36,7 @@ export default function InternshipSection({
   return (
     <section className="mt-16">
       <SearchBar value={search} onChange={setSearch} />
-
-      <PopularTags onSelectTag={setSearch} />
-
+      <PopularTags selectedTag={search} onSelectTag={setSearch} />
       <SectionHeading
         title="Latest Remote Internships"
         subtitle={`${filteredInternships.length} internships found`}

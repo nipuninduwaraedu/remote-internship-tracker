@@ -10,10 +10,14 @@ const tags = [
 ];
 
 interface PopularTagsProps {
+  selectedTag: string;
   onSelectTag: (tag: string) => void;
 }
 
-export default function PopularTags({ onSelectTag }: PopularTagsProps) {
+export default function PopularTags({
+  selectedTag,
+  onSelectTag,
+}: PopularTagsProps) {
   return (
     <section className="mt-8">
       <h2 className="mb-4 text-center text-lg font-semibold">
@@ -21,15 +25,23 @@ export default function PopularTags({ onSelectTag }: PopularTagsProps) {
       </h2>
 
       <div className="flex flex-wrap justify-center gap-3">
-        {tags.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => onSelectTag(tag)}
-            className="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-600 hover:text-white"
-          >
-            {tag}
-          </button>
-        ))}
+        {tags.map((tag) => {
+          const active = selectedTag === tag;
+
+          return (
+            <button
+              key={tag}
+              onClick={() => onSelectTag(tag)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                active
+                  ? "bg-blue-600 text-white"
+                  : "border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white"
+              }`}
+            >
+              {tag}
+            </button>
+          );
+        })}
       </div>
     </section>
   );
