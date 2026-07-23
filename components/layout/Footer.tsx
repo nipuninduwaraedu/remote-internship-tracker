@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-gray-600 md:flex-row">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-center text-sm text-gray-600 sm:px-6 md:flex-row md:text-left lg:px-8">
         <p>
           © {new Date().getFullYear()} Remote Internship Tracker. All rights
           reserved.

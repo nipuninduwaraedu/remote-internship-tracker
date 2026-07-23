@@ -13,16 +13,16 @@ export default function InternshipDetails({
   internship,
 }: InternshipDetailsProps) {
   return (
-    <section className="mx-auto max-w-5xl">
+    <section className="mx-auto max-w-5xl px-2 sm:px-0">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center text-blue-600 hover:underline"
+        className="mb-6 inline-flex items-center text-sm text-blue-600 hover:underline sm:mb-8 sm:text-base"
       >
         ← Back to Internships
       </Link>
 
-      <div className="rounded-xl border border-gray-200 bg-white p-8 shadow">
-        <div className="flex items-center gap-5">
+      <div className="rounded-xl border border-gray-200 bg-white p-4 shadow sm:p-6 lg:p-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
           {internship.companyLogo ? (
             <Image
               src={internship.companyLogo}
@@ -37,10 +37,12 @@ export default function InternshipDetails({
             </div>
           )}
 
-          <div>
-            <p className="text-blue-600 font-semibold">{internship.company}</p>
+          <div className="min-w-0">
+            <p className="font-semibold text-blue-600">{internship.company}</p>
 
-            <h1 className="text-4xl font-bold mt-2">{internship.title}</h1>
+            <h1 className="mt-2 break-words text-2xl font-bold sm:text-3xl lg:text-4xl">
+              {internship.title}
+            </h1>
 
             <p className="mt-2 text-gray-500">
               Posted {formatDate(internship.postedDate)}
@@ -70,7 +72,7 @@ export default function InternshipDetails({
           <h2 className="text-lg font-semibold">Job Description</h2>
 
           <div
-            className="prose prose-blue mt-5 max-w-none"
+            className="mt-5 max-w-none text-sm leading-7 text-gray-600 sm:text-base"
             dangerouslySetInnerHTML={{
               __html: internship.description,
             }}
@@ -82,7 +84,7 @@ export default function InternshipDetails({
             href={internship.applyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-blue-600 px-8 py-3 text-white font-semibold transition hover:bg-blue-700"
+            className="inline-block w-full rounded-lg bg-blue-600 px-8 py-3 text-center font-semibold text-white transition hover:bg-blue-700 sm:w-auto"
           >
             Apply Now →
           </Link>

@@ -17,7 +17,7 @@ export default function SavedPage() {
   }, []);
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-10">
+    <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <SectionHeading
         title="Saved Internships"
         subtitle={`${savedInternships.length} internship${
@@ -28,14 +28,14 @@ export default function SavedPage() {
       {savedInternships.length > 0 ? (
         <InternshipGrid internships={savedInternships} />
       ) : (
-        <div className="mt-10 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-12 text-center">
-          <div className="text-6xl">❤️</div>
+        <div className="mt-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center sm:mt-10 sm:p-10 lg:p-12">
+          <div className="text-5xl sm:text-6xl">❤️</div>
 
-          <h2 className="mt-6 text-2xl font-bold text-gray-900">
+          <h2 className="mt-6 text-xl font-bold text-gray-900 sm:text-2xl">
             No Saved Internships
           </h2>
 
-          <p className="mt-3 text-gray-500">
+          <p className="mt-3 text-sm text-gray-500 sm:text-base">
             Save internships from the homepage and they'll appear here.
           </p>
 

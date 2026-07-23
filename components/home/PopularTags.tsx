@@ -19,12 +19,12 @@ export default function PopularTags({
   onSelectTag,
 }: PopularTagsProps) {
   return (
-    <section className="mt-8">
-      <h2 className="mb-4 text-center text-lg font-semibold">
+    <section className="mt-6 px-2 sm:mt-8 sm:px-6 lg:px-8">
+      <h2 className="mb-3 text-center text-sm font-semibold sm:mb-4 sm:text-base lg:text-lg">
         Popular Technologies
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {tags.map((tag) => {
           const active = selectedTag === tag;
 
@@ -32,7 +32,7 @@ export default function PopularTags({
             <button
               key={tag}
               onClick={() => onSelectTag(tag)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`rounded-full px-3 py-2 text-xs font-medium transition sm:px-4 sm:text-sm ${
                 active
                   ? "bg-blue-600 text-white"
                   : "border border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white"

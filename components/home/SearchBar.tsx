@@ -5,14 +5,14 @@ interface SearchBarProps {
 
 export default function SearchBar({ value, onChange }: SearchBarProps) {
   return (
-    <div className="mx-auto mt-10 max-w-2xl">
+    <div className="mx-auto mt-8 w-full max-w-2xl px-4 sm:mt-10 sm:px-0">
       <div className="relative">
         <input
           type="text"
           placeholder="Search internships..."
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-4 py-3 pr-12 outline-none focus:border-blue-600"
+          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-12 text-sm shadow-sm outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 sm:text-base"
         />
 
         {value && (

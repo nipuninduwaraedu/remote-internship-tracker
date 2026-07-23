@@ -25,15 +25,15 @@ export default function InternshipCard({ internship }: InternshipCardProps) {
   }
 
   return (
-    <article className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="flex items-center gap-3">
+    <article className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6">
+      <div className="flex items-start gap-3">
         {internship.companyLogo ? (
           <Image
             src={internship.companyLogo}
             alt={internship.company}
             width={50}
             height={50}
-            className="rounded-lg border"
+            className="h-12 w-12 rounded-lg border object-cover"
           />
         ) : (
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-200 font-bold text-gray-600">
@@ -41,14 +41,16 @@ export default function InternshipCard({ internship }: InternshipCardProps) {
           </div>
         )}
 
-        <div>
-          <p className="font-semibold text-blue-600">{internship.company}</p>
+        <div className="min-w-0">
+          <p className="break-words font-semibold text-blue-600">
+            {internship.company}
+          </p>
 
           <p className="text-sm text-gray-500">Remote Internship</p>
         </div>
       </div>
 
-      <h2 className="mt-5 text-xl font-bold text-gray-900">
+      <h2 className="mt-4 break-words text-lg font-bold text-gray-900 sm:mt-5 sm:text-xl">
         {internship.title}
       </h2>
 
@@ -77,7 +79,7 @@ export default function InternshipCard({ internship }: InternshipCardProps) {
           Posted {formatDate(internship.postedDate)}
         </p>
 
-        <div className="mt-6 flex gap-3">
+        <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-3">
           <button
             onClick={handleSave}
             className={`flex-1 rounded-lg px-4 py-2 font-medium transition ${
